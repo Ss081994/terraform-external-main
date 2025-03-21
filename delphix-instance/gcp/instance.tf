@@ -10,9 +10,16 @@ resource "google_compute_instance" "instance" {
   }
 
   network_interface {
-    network    = var.network
-    subnetwork = var.subnet
-    access_config {}
+    network    = google_compute_network.vpc_network.id
+    subnetwork = google_compute_subnetwork.subnet.id
+  }
+  
+  tags = ["delphix-engine"]
+
+  metadata = {
+    owner   = var.owner
+    creator = var.creator
+    enable-os-login = "true"
   }
 
   service_account {

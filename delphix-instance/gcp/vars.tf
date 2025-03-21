@@ -34,6 +34,10 @@ variable "image_id" {
   description = "Image ID used for main instance"
   type        = string
 }
+variable "project_id" {
+  description = "Project id  to run the project on"
+  type        = string
+}
 
 variable "instance_size" {
   description = "GCP instance machine type"
@@ -62,14 +66,10 @@ variable "hosted_zone" {
   default     = ""
 }
 
-variable "network" {
-  description = "GCP VPC network name"
-  type        = string
-}
-
-variable "subnet" {
+variable "subnet_name" {
   description = "GCP subnet name for the instance"
   type        = string
+  default     = "my-custom-subnet" 
 }
 
 variable "zone" {
@@ -82,3 +82,16 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "vpc_name" {
+  description = "VPC Name"
+  type        = string
+  default     = "my-custom-vpc"
+}
+
+variable "subnet_cidr" {
+  description = "Subnet CIDR Block"
+  type        = string
+  default     = "10.18.18.0/24"
+}
+
