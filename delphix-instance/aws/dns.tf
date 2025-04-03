@@ -29,4 +29,5 @@ resource "aws_route53_record" "dns_txt_record" {
   type    = "TXT"
   ttl     = "300"
   records = ["{\\\"name\\\": \\\"${var.instance_name}\\\",\\\"user\\\": \\\"${var.owner}\\\"}"]
+
 }
