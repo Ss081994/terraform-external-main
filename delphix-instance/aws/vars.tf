@@ -72,7 +72,7 @@ variable "owner" {
 variable "hosted_zone" {
   description = "Hosted zone name to create a Route53 record in"
   type        = string
-  default     = ""
+  default     = "ps.delphix.com."
 }
 
 variable "subnet" {
