@@ -1,0 +1,8 @@
+instance_name = "terraform-test"
+image_id = "ami-0b913fbea4739e7c0"
+#image_id = "ami-0133bff0876f6ee8e" Delphix Engine 2025.1.0.0 2025-01-21-01-46
+#image_id = "ami-0e50399b33c92fe74" Delphix Engine 29.0.0.1 2024-11-27-03-06
+creator = "Sumeet"
+owner = "proserv"
+subnet = "subnet-0e94091829e1ed88c"
+security_groups = ["sg-02cfd6c54c94a75e3"]
